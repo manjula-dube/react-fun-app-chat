@@ -3,7 +3,7 @@ import React from 'react';
 const App = () => {
   return (
     <div>
-      <header id="heading">Snap engage Header</header>
+      <header style={{color:'white',textAlign:'center',padding:'10px',fontSize:'18px'}} id="heading">Header</header>
     </div>
   );
 };

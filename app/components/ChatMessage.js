@@ -12,12 +12,14 @@ class ChatMessage extends React.Component {
 
 
   render() {
-    
+    console.log(this.props.chat)
     return (
-      <div style={{width:'60%'}}>
-      <div>djqi</div>
-      
-         
+      <div style={{width:'60%',float:'left',padding:'10px'}}>
+        {this.props.chat.map(chat =>
+            <div key={chat.id}>
+              <div style={{width:'100%', height: '50px', border: '1px solid black',background: '#F5F6F7',margin: '12px'}}> {chat.initial_message}</div>
+            </div>
+        )}
       </div>
     );
   }

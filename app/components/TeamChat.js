@@ -1,8 +1,7 @@
 import React from 'react';
+import _ from 'lodash'
 import { chatData } from '../api/apiConfig'
 import ChatMessage from './ChatMessage'
-import _ from 'lodash'
-
 
 class TeamChat extends React.Component {
 
@@ -18,7 +17,7 @@ class TeamChat extends React.Component {
 
     fetch(chatData)
       .then(response => response.json())
-      .then(data => this.setState({ chatdata: data }));
+      .then(data => this.setState({ chatdata: data, done:true }));
   }
 
   render() {
@@ -29,13 +28,10 @@ class TeamChat extends React.Component {
        unique_chat = _.uniqBy(request_chat)
     })
 
-    //we can have a unique chat
-    console.log(unique_chat)
-
     return (
        <React.Fragment>
-        <div style={{width:'40%',display:'inline-block'}}>
-        { unique_chat.map(chat =>
+        <div style={{width:'30%',display:'inline-block',border:'1px solid grey',float:'left'}}>
+        { this.state.done && unique_chat.map(chat =>
             <div key={chat}>
               <ul>
               <li style={{width:'300px', height: '40px', background: '#EAF7FF'}}> {chat}</li>
@@ -43,6 +39,7 @@ class TeamChat extends React.Component {
             </div>
         )}
         </div>
+        <ChatMessage chat={this.state.chatdata}/>
        </React.Fragment>
     );
   }
