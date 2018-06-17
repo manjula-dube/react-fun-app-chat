@@ -13,4 +13,5 @@ Things to do:
   #### Using eslint 
   #### Intergrating test setup 
   #### fetch the api and using them on front end 
+  #### Host the api on https://www.jasonbase.com/things/ZPVk.json to use it in fetch 
  
