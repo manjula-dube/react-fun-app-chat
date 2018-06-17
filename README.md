@@ -4,8 +4,9 @@ You can run the project using  `npm run start` but before that make sure you hav
 
 #### Things to do:
 * Using styled Components
-* Functionality Focus
+* Finish Functionality 
 * Fix some error on precommit hooks
+* Write test cases
  
  #### Things focussed on:
  * Precommit hooks
