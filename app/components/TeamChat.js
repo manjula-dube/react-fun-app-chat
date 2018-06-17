@@ -23,25 +23,25 @@ class TeamChat extends React.Component {
 
   render() {
     const request_chat = []
-    let unique_chat = []
+    var unique_chat = []
     const unique_requested = this.state.chatdata.map(chat => {
        request_chat.push(chat.requested_by)
        unique_chat = _.uniqBy(request_chat)
     })
-    
+
     //we can have a unique chat
     console.log(unique_chat)
 
     return (
        <React.Fragment>
         <div style={{width:'40%',display:'inline-block'}}>
-        {this.state.chatdata.map(chat =>
-            <div key={chat.id}>
+        { unique_chat.map(chat =>
+            <div key={chat}>
               <ul>
-              <li style={{width:'300px', height: '40px', background: '#EAF7FF'}}> {chat.requested_by}</li>
+              <li style={{width:'300px', height: '40px', background: '#EAF7FF'}}> {chat}</li>
               </ul>
             </div>
-          )}
+        )}
         </div>
        </React.Fragment>
     );
