@@ -1,0 +1,1 @@
+export const chatData = 'https://www.jasonbase.com/things/ZPVk.json'

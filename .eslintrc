@@ -19,7 +19,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "linebreak-style": "off",
     "global-require": "off",
-    "semi": "warn",
+    "semi": "off",
     "arrow-body-style": "off"
   }
 }
