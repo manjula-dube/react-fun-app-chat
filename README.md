@@ -3,7 +3,7 @@ React Chat Application
 You can run the project using  `npm run start` but before that make sure you have all the dependendies installed using `npm install`
 
 #### Things to do:
-* Using styled Components
+* Using styled Components instead of Sass
 * Finish Functionality 
 * Fix some error on precommit hooks
 * Write test cases
